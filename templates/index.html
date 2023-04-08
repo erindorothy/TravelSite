@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelRecs.com</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>TravelRecs.com</h1>
+    </header>
+    <main>
+        <section class="interests">
+            <h2>Interests</h2>
+            <div class="grid">
+                <div class="selector-box" data-interest="Food">Food</div>
+                <div class="selector-box" data-interest="Nature">Nature</div>
+                <div class="selector-box" data-interest="History">History</div>
+                <div class="selector-box" data-interest="Music">Music</div>
+                <div class="selector-box" data-interest="Eclectic">Eclectic</div>
+                <div class="selector-box" data-interest="Anything">Anything</div>
+            </div>
+        </section>
+        <section class="location">
+            <label for="city-state">City and State:</label>
+            <input type="text" id="city-state" placeholder="Enter city and state">
+        </section>
+        <button id="submit">Submit</button>
+        <p id="result"></p>
+    </main>
+    <script src="/static/app.js"></script>
+</body>
+</html>
