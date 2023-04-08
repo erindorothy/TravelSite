@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+  </head>
+  <body>
+    <h1>Welcome to my website</h1>
+    <p>Thanks for visiting my website. Please select your interests:</p>
+    <form>
+      <input type="checkbox" id="food" name="interest" value="food">
+      <label for="food">Food</label><br>
+      <input type="checkbox" id="outdoors" name="interest" value="outdoors">
+      <label for="outdoors">Outdoors</label><br>
+      <input type="checkbox" id="art" name="interest" value="art">
+      <label for="art">Art</label><br>
+      <input type="checkbox" id="sports" name="interest" value="sports">
+      <label for="sports">Sports</label><br>
+      <input type="checkbox" id="hotels" name="interest" value="hotels">
+      <label for="hotels">Hotels</label><br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <div id="results"></div>
+    <script>
+      const form = document.querySelector('form');
+      const results = document.querySelector('#results');
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const interests = document.querySelectorAll('input[type=checkbox]:checked');
+        if (interests.length < 3) {
+          results.textContent = 'Please select at least three interests.';
+        } else {
+          let interestsArray = Array.from(interests).map(interest => interest.value);
+          results.textContent = `You selected ${interestsArray.join(', ')}.`;
+        }
+      });
+    </script>
+  </body>
+</html>
+
